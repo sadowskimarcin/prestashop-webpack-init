@@ -1,0 +1,78 @@
+// COLORS
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary,
+.custom-radio input[type=radio]:checked+span {
+  background-color: $accent;
+}
+
+.product-price,
+#blockcart-modal .product-name,
+.tabs .nav-tabs .nav-link.active,
+a:hover,
+a:focus,
+.page-my-account #content .links a:hover i {
+  color: $accent;
+}
+
+.product-images>li.thumb-container>.thumb.selected,
+.product-images>li.thumb-container>.thumb:hover,
+.tabs .nav-tabs .nav-link.active,
+.tabs .nav-tabs .nav-link:hover {
+  border-color: $accent;
+}
+
+.btn-primary:hover {
+  background-color: $accent-hover;
+}
+
+.btn-primary.active,
+.btn-primary:active,
+.open>.btn-primary.dropdown-toggle,
+.btn-primary.active.focus,
+.btn-primary.active:focus,
+.btn-primary.active:hover,
+.btn-primary:active.focus,
+.btn-primary:active:focus,
+.btn-primary:active:hover,.open>.btn-primary.dropdown-toggle.focus, .open>.btn-primary.dropdown-toggle:focus, .open>.btn-primary.dropdown-toggle:hover {
+  background-color: $accent-active;
+}
+
+a {
+  color: #2b2b2a;
+}
+.form-control:focus,
+.input-group.focus {
+  outline: none;
+  border-color: $accent;
+}
+
+
+// BOX-SHADOW
+.card,
+.brands-sort .select-title,
+.products-sort-order .select-title,
+.suppliers-sort .select-title,
+.block-categories,
+#search_filters,
+#search_filters_brands,
+#search_filters_suppliers,
+.tabs,
+.product-cover img,
+.product-images>li.thumb-container>.thumb,
+.page-my-account #content .links a span.link-item,
+.page-customer-account #content,
+.page-order-detail .box
+{
+  border: 1px solid #D1D1D1;
+  box-shadow: none;
+}
+
+.bootstrap-touchspin,
+.btn-primary,
+.btn-secondary,
+.btn-tertiary,
+.product-variants>.product-variants-item select
+{
+  box-shadow: none;
+}

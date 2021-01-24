@@ -1,11 +1,13 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
+const globImporter = require('node-sass-glob-importer');
 
 let config = {
   entry: {
-    custom: './src/default/app.ts',
-    admin: './src/admin/app.ts',
+    lib: './src/library/main.ts',
+    front: './src/front/main.ts',
+    admin: './src/admin/main.ts',
   },
   output: {
     path: path.resolve(__dirname, '../assets'),
@@ -26,7 +28,18 @@ let config = {
         test: /\.(scss|css)$/,
         use: [
           MiniCssExtractPlugin.loader,
+        ]
+      },
+      {
+        test: /\.(scss|css)$/,
+        use: [
           'css-loader',
+        ]
+      },
+      {
+        test: /\.(scss|css)$/,
+        exclude: [/node_modules/],
+        use: [
           {
             loader: 'postcss-loader',
             options: {
@@ -37,7 +50,19 @@ let config = {
               },
             },
           },
-          'sass-loader'
+        ]
+      },
+      {
+        test: /\.(scss|css)$/,
+        use: [
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                importer: globImporter()
+              }
+            }
+          }
         ],
       },
     ]
